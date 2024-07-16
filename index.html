@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StressTest</title>
+    <script src="script.js" defer></script>
+</head>
+<h1 style="background-color: #1e21b6;" class="header">StressTest</h1>
+<body>
+    <div class="centered-container">
+    <button class="btnMandel" id="btnMandel" onclick="location.href='Mandelbrot'">drawMandelbrot</button>
+    <button class="btnMandel" id="btnNodeHog">run NodeHog</button>
+    </div>
+    <!-- <video muted="true" autoplay="true" loop="true" class="vid" src="images/quadhd.mp4" width="100%" height="100%"></video>
+    <video muted="true" autoplay="true" loop="true" class="vid" src="images/fullhd.mp4" width="100%" height="100%"></video> -->
+    <video muted="true" autoplay="true" loop="true" class="vid" src="images/fullhd.mp4" width="100%" height="100%"></video>
+
+    <video muted="true" autoplay="true" loop="true" class="vid" src="images/testvideo.mp4" width="100%" height="100%"></video>
+<div class="centered-container">
+    <div style="margin-bottom: 10px;">
+        <Button class="btnsRam" id="btnStress1">StressTestRam Frequent Small Allocations</Button>
+        <Button class="btnsRam" id="btnStress2">StressTestRam Large Allocations in Small Time</Button>
+        <Button class="btnsRam" id="btnStress3">StressTestRam long-term impact of small continous allocations</Button>
+        <Button class="btnsRam" id="btnStress4">StressTestRam large allocations over an extended period</Button>
+        <Button class="btnsRam" id="btnStress5">StressTestRam PUSH THE LIMIT</Button>
+    </div>
+    <div>
+        <Button class="btnsCpu" id="btnCpu1">StressTestCpu 10 Seconds</Button>
+        <Button class="btnsCpu" id="btnCpu2">StressTestCpu 1 Minute </Button>
+        <Button class="btnsCpu" id="btnCpu3">StressTestCpu 10 Minutes </Button>
+        <Button class="btnsCpu" id="btnCpu4">StressTestCpu 1 Hour</Button>
+        <Button class="btnsCpu" id="btnCpu5">StressTestCpu 12 Hours</Button>
+    </div class="divLogging">
+</div>
+    <div>
+        <label class="lblContent"> Browser: </label><label class="lblContent" id="lblNuc"></label>
+    </div>
+    <div>
+     <label class="lblContent"> Current UsedMemory: </label><label class="lblContent" id="lblContent"></label>
+     <div>
+     <label class="lblContent"> TimeSinceStarted: </label><label class="lblContent" id="lblTime"></label>
+    </div>
+    <div>
+        <label class="lblContent"> Current PrimesCount: </label><label class="lblContent" id="lblPrimes"> Not Started</label>
+       </div>
+       <div>
+        <label class="lblContent"> Logging: </label><label class="lblContent" id="lblLog">Nothing to Log rn</label>
+    </div>
+    </div>
+</body>
+</html>
+<style>
+    .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    }
+
+    .lblContent{
+        font-size: 100%;
+        text-align: center;
+    }
+    .btnsRam{
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 25px 45px; 
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px; 
+        margin: 8px 4px;
+        cursor: pointer;
+    }
+    .btnMandel{
+        background-color: #1e21b6;
+        border: none;
+        color: white;
+        padding: 25px 45px; 
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px; 
+        margin: 8px 4px;
+        cursor: pointer;
+    }
+    .btnsCpu{
+        background-color: #1e21b6;
+        border: none;
+        color: white;
+        padding: 25px 45px; 
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px; 
+        margin: 8px 4px;
+        cursor: pointer;
+    }
+    .vids{
+        margin-bottom: 30px;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .header{
+        text-align: center;
+        font-size: 200%;
+    }
+    .divLogging{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+</style>
